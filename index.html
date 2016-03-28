@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>my-project</title>
+	</head>
+
+	<body>
+		<link rel="stylesheet" href="src/bootstrap/bootstrap.css" />
+		<app></app>
+		<list></list>
+		<insert></insert>
+		<alert type="success"></alert>
+		<test></test>
+		<new-alert :show.sync="showTop" :duration="3000" type="danger" width="400px" placement="top" dismissable>
+			<span class="icon-info-circled alert-icon-float-left"></span>
+			<strong>Heads up!</strong>
+			<p>This alert needs your attention.</p>
+		</new-alert>
+		<div id="apps"></div>
+		<script src="dist/build.js"></script>
+	</body>
+
+</html>
