@@ -5,8 +5,6 @@ import Insert from './Insert.vue'
 import Alert from './alert.vue'
 import Test from './test.vue'
 import NewAlert from './new_alert.vue'
-// import parent from './parent.vue'
-// import child from './child.vue'
 
 Vue.component('Insert', Insert);
 Vue.component('List', List);
@@ -14,8 +12,7 @@ Vue.component('App', App);
 Vue.component('alert', Alert);
 Vue.component('Test', Test);
 Vue.component('NewAlert', NewAlert);
-// Vue.component('child', child);
-// Vue.component('parent', parent);
+
 Vue.component('child', {
     template: '#child-template',
     data: function() {
