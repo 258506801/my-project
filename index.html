@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-		<title>my-project</title>
-	</head>
+<head>
+	<meta charset="utf-8">
+	<title>my-project</title>
+</head>
 
-	<body>
-		<link rel="stylesheet" href="src/bootstrap/bootstrap.css" />
-		<app></app>
-		<list></list>
-		<insert></insert>
-		<alert type="success"></alert>
-		<test></test>
-		<new-alert :show.sync="showTop" :duration="3000" type="danger" width="400px" placement="top" dismissable>
-			<span class="icon-info-circled alert-icon-float-left"></span>
-			<strong>Heads up!</strong>
-			<p>This alert needs your attention.</p>
-		</new-alert>
-		<div id="apps"></div>
-		<script src="dist/build.js"></script>
-	</body>
+<body>
+	<link rel="stylesheet" href="src/bootstrap/bootstrap.css" />
+	<app></app>
+	<list></list>
+	<insert></insert>
+	<alert type="success"></alert>
+	<test></test>
+	<new-alert :show.sync="showTop" :duration="3000" type="danger" width="400px" placement="top" dismissable>
+		<span class="icon-info-circled alert-icon-float-left"></span>
+		<strong>Heads up!</strong>
+		<p>This alert needs your attention.</p>
+	</new-alert>
+
+
+	<div id="apps" v-my-directive="fasdfasfsdfsa"></div>
+
+	<div id="events-example">
+		<p>Messages: {{ messages | json }}</p>
+		<child></child>
+	</div>
+
+	<!-- 子组件模板 -->
+	<template id="child-template">
+		<input v-model="msg">
+		<button v-on:click="notify">Dispatch Event</button>
+	</template>
+	<script src="dist/build.js"></script>
+</body>
 
 </html>
